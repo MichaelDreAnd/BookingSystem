@@ -9,7 +9,16 @@ import { StepperComponent } from './stepper/stepper.component';
 import { DateComponent } from './booking/date/date.component';
 import { MatDatepickerModule, } from '@angular/material/datepicker';
 import { TimeComponent } from './booking/time/time.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { MatButtonModule } from '@angular/material/button';
+import { AttendancesComponent } from './booking/attendances/attendances.component';
+import { ActivitiesComponent } from './booking/activities/activities.component';
+import { ActivitiesListComponent } from './booking/activities-list/activities-list.component';
+import { PackageListComponent } from './booking/package-list/package-list.component';
+import { PackageComponent } from './booking/package/package.component';
+import { FoodCheckComponent } from './booking/food-check/food-check.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
+
 
 
 
@@ -20,7 +29,13 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     StepperComponent,
     DateComponent,
-    TimeComponent
+    TimeComponent,
+    AttendancesComponent,
+    ActivitiesComponent,
+    ActivitiesListComponent,
+    PackageListComponent,
+    PackageComponent,
+    FoodCheckComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -30,7 +45,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    NgbModule
+    MatButtonModule,
+    MatCheckboxModule
 
   ],
   providers: [],
