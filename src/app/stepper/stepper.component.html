@@ -10,47 +10,42 @@
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
+  <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
         <ng-template matStepLabel>Antal personer</ng-template>
         <app-attendances></app-attendances>
-        <div>
-          <button mat-button matStepperNext>Næste</button>
-        </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="firstFormGroup">
-        <form [formGroup]="firstFormGroup">
+    <mat-step [stepControl]="thirdFormGroup">
+        <form [formGroup]="thirdFormGroup">
           <ng-template matStepLabel>Vælg pakke</ng-template>
-          <app-package-list></app-package-list>
+         <!-- <app-package-list></app-package-list>
           <div>
             <button mat-button matStepperNext>Næste</button>
-          </div>
+          </div>-->
         </form>
       </mat-step>
-      <mat-step [stepControl]="firstFormGroup">
-          <form [formGroup]="firstFormGroup">
+      <mat-step  [stepControl]="forthFormGroup">
+          <form [formGroup]="forthFormGroup">
             <ng-template matStepLabel>Vælg aktiviteter</ng-template>
+          
             <app-activities-list></app-activities-list>
             <div>
               <button mat-button matStepperNext>Næste</button>
             </div>
           </form>
         </mat-step>
-        <mat-step [stepControl]="firstFormGroup">
-            <form [formGroup]="firstFormGroup">
+        <mat-step [stepControl]="fifthFormGroup">
+            <form [formGroup]="fifthFormGroup">
               <ng-template matStepLabel>Ønskes mad?</ng-template>
                 <app-food-check></app-food-check>
-              <div>
-                <button mat-button matStepperNext>Næste</button>
-              </div>
             </form>
           </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
+  <mat-step [stepControl]="sixthFormGroup">
+    <form [formGroup]="sixthFormGroup">
       <ng-template matStepLabel>Kontakt oplysninger</ng-template>
       <mat-form-field>
-        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        <input matInput placeholder="Address" formControlName="sixthCtrl" required>
       </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>Back</button>
@@ -58,12 +53,10 @@
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="thirdFormGroup">
-      <form [formGroup]="thirdFormGroup">
+  <mat-step [stepControl]="seventhFormGroup">
+      <form [formGroup]="seventhFormGroup">
         <ng-template matStepLabel>Godkend ordre</ng-template>
-        <app-date></app-date>
-        <br>
-        <app-time></app-time>
+        <app-receipt></app-receipt>
         <div>
           <button mat-button matStepperPrevious>Back</button>
           <button mat-button matStepperNext>Næste</button>
@@ -71,22 +64,14 @@
       </form>
     </mat-step>
   <mat-step>
-  <mat-step [stepControl]="forthFormGroup">
-      <form [formGroup]="forthFormGroup">
+  <mat-step [stepControl]="eighthFormGroup">
+      <form [formGroup]="eighthFormGroup">
         <ng-template matStepLabel>Færdig</ng-template>
-        <app-date></app-date>
-        <br>
-        <app-time></app-time>
-        <div>
-          <button mat-button matStepperNext>Næste</button>
-        </div>
+        <app-receipt></app-receipt>
       </form>
     </mat-step>
     <ng-template matStepLabel>Done</ng-template>
-    Ordre sendt.
-    <!-- <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
-    </div> -->
+   
+    
   </mat-step>
 </mat-vertical-stepper>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-food-check',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./food-check.component.css']
 })
 export class FoodCheckComponent implements OnInit {
+ 
+  Food: boolean;
 
-  constructor() { }
+
+
+  constructor(private data: DataService) {}
 
   ngOnInit() {
+    this.data.currentFoodBoolean.subscribe(Food => this.Food = Food);
+  }
+
+  newMessage(){
+    this.data.changeFood(this.Food)
   }
 
 }

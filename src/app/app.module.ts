@@ -17,6 +17,9 @@ import { PackageListComponent } from './booking/package-list/package-list.compon
 import { PackageComponent } from './booking/package/package.component';
 import { FoodCheckComponent } from './booking/food-check/food-check.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import {FormsModule} from '@angular/forms';
+import { ReceiptComponent } from './receipt/receipt.component';
+import { DataService } from './data.service';
 
 
 
@@ -35,7 +38,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     ActivitiesListComponent,
     PackageListComponent,
     PackageComponent,
-    FoodCheckComponent
+    FoodCheckComponent,
+    ReceiptComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -46,10 +50,11 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    FormsModule
 
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,6 @@
 <mat-form-field>
-  <input matInput type="number" placeholder="Antal gæster">
+  <input [(ngModel)]="numberOfPeople"   matInput type="number" placeholder="Antal gæster">
+  <div>
+    <button mat-button matStepperNext (click)="newMessage()"  >Næste</button>   <!-- det er i newMessage den er gal --> 
+  </div> 
 </mat-form-field>
