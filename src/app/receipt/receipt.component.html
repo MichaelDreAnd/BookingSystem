@@ -5,5 +5,14 @@
 
   <div *ngIf="SelectFood; else elseBlock"><h1>Mad Ønskes.</h1></div>
   <ng-template #elseBlock><h1>Mad Ønskes Ikke.</h1></ng-template>
+  <br>
+  <h1> Aktiviteter: </h1>
+  <li *ngFor="let activity of SelectedActivities">
+     {{activity.NAME}}
+  </li>
+  
+  <button (click)="checkbool()" text="Test" ></button>
+     
+  <br>
   
   

@@ -1,6 +1,11 @@
-<app-activities></app-activities> 
-<app-activities></app-activities> 
-<app-activities></app-activities> 
-<app-activities></app-activities> 
-<app-activities></app-activities> 
-<app-activities></app-activities> 
+
+<li *ngFor="let activity of AllActivities">
+Navn: {{activity.NAME}}  Pris {{activity.PRICEPERPERSON}} 
+Vælg: {{activity.IsSelected}}
+<input type="checkbox" [(ngModel)]="activity.IsSelected" > 
+</li>
+<button mat-button matStepperNext (click)="submit()" >Næste</button>
+
+
+
+
