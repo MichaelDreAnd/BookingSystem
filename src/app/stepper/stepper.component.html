@@ -42,9 +42,7 @@
   <mat-step [stepControl]="sixthFormGroup">
     <form [formGroup]="sixthFormGroup">
       <ng-template matStepLabel>Kontakt oplysninger</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Address" formControlName="sixthCtrl" required>
-      </mat-form-field>
+      <app-contactinfo-item></app-contactinfo-item>
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>

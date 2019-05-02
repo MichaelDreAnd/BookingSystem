@@ -20,6 +20,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import {FormsModule} from '@angular/forms';
 import { ReceiptComponent } from './receipt/receipt.component';
 import { DataService } from './data.service';
+import { ContactinfoItemComponent } from './contactinfo-item/contactinfo-item.component';
 
 
 
@@ -39,7 +40,8 @@ import { DataService } from './data.service';
     PackageListComponent,
     PackageComponent,
     FoodCheckComponent,
-    ReceiptComponent
+    ReceiptComponent,
+    ContactinfoItemComponent
   ],
   imports: [
     ReactiveFormsModule,
