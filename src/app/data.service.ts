@@ -21,14 +21,14 @@ export class DataService{
     private PersonSource = new BehaviorSubject<Person>(new Person("","","","","","",""))
     currentPerson = this.PersonSource.asObservable();
 
-    
+
     changeNumberOfPeople(numberOfPeople: number) {
       this.numberOfPeopleSource.next(numberOfPeople)}
     changeFood(changedFood: boolean){
       this.FoodBooleanSource.next(changedFood)}
     changeActivities(activities:ActivitiesComponent[]){
       this.ActivitiesSource.next(activities)}
-    changePerson(Person:Person){1
+    changePerson(Person:Person){
       this.PersonSource.next(Person);
     }
 

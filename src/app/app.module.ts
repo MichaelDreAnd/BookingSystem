@@ -21,6 +21,7 @@ import {FormsModule} from '@angular/forms';
 import { ReceiptComponent } from './receipt/receipt.component';
 import { DataService } from './data.service';
 import { ContactinfoItemComponent } from './contactinfo-item/contactinfo-item.component';
+import { CustompackageselectionComponent } from './custompackageselection/custompackageselection.component';
 
 
 
@@ -41,7 +42,8 @@ import { ContactinfoItemComponent } from './contactinfo-item/contactinfo-item.co
     PackageComponent,
     FoodCheckComponent,
     ReceiptComponent,
-    ContactinfoItemComponent
+    ContactinfoItemComponent,
+    CustompackageselectionComponent
   ],
   imports: [
     ReactiveFormsModule,

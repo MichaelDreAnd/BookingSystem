@@ -13,19 +13,15 @@ export class ContactinfoItemComponent implements OnInit {
   person: Person;
 
 
-  constructor(private data: DataService) 
-  {
-
-
-  }
+  constructor(private data: DataService) {}
 
   ngOnInit()
   {
-   this.data.currentPerson.subscribe(person => this.person = person)
+   this.data.currentPerson.subscribe(person => this.person = person);
   }
 
   newPerson(){
-    this.data.changePerson(this.person)
+    this.data.changePerson(this.person);
   }
 
 

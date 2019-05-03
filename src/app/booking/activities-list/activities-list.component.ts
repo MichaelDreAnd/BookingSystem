@@ -17,7 +17,10 @@ export class ActivitiesListComponent implements OnInit {
 
 
   constructor(private data: DataService) {
-  this.AllActivities = [this.activityA, this.activityB,this.activityC,this.activityD];
+ 
+ 
+    
+    this.AllActivities = [this.activityA, this.activityB,this.activityC,this.activityD];
   }
 
  

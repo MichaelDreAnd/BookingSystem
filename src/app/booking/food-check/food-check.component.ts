@@ -7,7 +7,7 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./food-check.component.css']
 })
 export class FoodCheckComponent implements OnInit {
- 
+
   Food: boolean;
 
 
@@ -19,7 +19,7 @@ export class FoodCheckComponent implements OnInit {
   }
 
   newMessage(){
-    this.data.changeFood(this.Food)
+    this.data.changeFood(this.Food);
   }
 
 }

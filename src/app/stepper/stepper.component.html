@@ -25,41 +25,9 @@
           </div>-->
         </form>
       </mat-step>
-      <mat-step  [stepControl]="forthFormGroup">
-          <form [formGroup]="forthFormGroup">
-            <ng-template matStepLabel>Vælg aktiviteter</ng-template>
-          
-            <app-activities-list></app-activities-list>
-            
-          </form>
-        </mat-step>
-        <mat-step [stepControl]="fifthFormGroup">
-            <form [formGroup]="fifthFormGroup">
-              <ng-template matStepLabel>Ønskes mad?</ng-template>
-                <app-food-check></app-food-check>
-            </form>
-          </mat-step>
-  <mat-step [stepControl]="sixthFormGroup">
-    <form [formGroup]="sixthFormGroup">
-      <ng-template matStepLabel>Kontakt oplysninger</ng-template>
-      <app-contactinfo-item></app-contactinfo-item>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="seventhFormGroup">
-      <form [formGroup]="seventhFormGroup">
-        <ng-template matStepLabel>Godkend ordre</ng-template>
-        <app-receipt></app-receipt>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Næste</button>
-        </div>
-      </form>
-    </mat-step>
-  <mat-step>
+      <mat-step>
+        <app-custompackageselection></app-custompackageselection>
+     </mat-step>
   <mat-step [stepControl]="eighthFormGroup">
       <form [formGroup]="eighthFormGroup">
         <ng-template matStepLabel>Færdig</ng-template>
@@ -69,5 +37,5 @@
     <ng-template matStepLabel>Done</ng-template>
    
     
-  </mat-step>
+  
 </mat-vertical-stepper>
