@@ -8,10 +8,10 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./activities-list.component.css']
 })
 export class ActivitiesListComponent implements OnInit {
-  activityA : ActivitiesComponent = new ActivitiesComponent("Crazy Gokart",0,0,123,"Du kører i gokart")
-  activityB : ActivitiesComponent = new ActivitiesComponent("HUNT",0,0,240,"Shoot the birds!")
-  activityC : ActivitiesComponent = new ActivitiesComponent("Hygge",0,0,123,"Du hygger")
-  activityD : ActivitiesComponent = new ActivitiesComponent("Football",0,0,240,"Shoot the shoot")
+  activityA: ActivitiesComponent = new ActivitiesComponent("Crazy Gokart",0,0,123,"Du kører i gokart")
+  activityB: ActivitiesComponent = new ActivitiesComponent("HUNT",0,0,240,"Shoot the birds!")
+  activityC: ActivitiesComponent = new ActivitiesComponent("Hygge",0,0,123,"Du hygger")
+  activityD: ActivitiesComponent = new ActivitiesComponent("Football",0,0,240,"Shoot the shoot")
   AllActivities: ActivitiesComponent[];
   SelectedActivities: ActivitiesComponent[];
 
@@ -19,7 +19,7 @@ export class ActivitiesListComponent implements OnInit {
   constructor(private data: DataService) {
  
  
-    
+
     this.AllActivities = [this.activityA, this.activityB,this.activityC,this.activityD];
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
-import { ActivitiesComponent } from '../booking/activities/activities.component';
+import { DataService } from '../../data.service';
+import { ActivitiesComponent } from '../activities/activities.component';
 import { Person } from '../contactinfo-item/person';
 
 

@@ -18,10 +18,17 @@ import { PackageComponent } from './booking/package/package.component';
 import { FoodCheckComponent } from './booking/food-check/food-check.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {FormsModule} from '@angular/forms';
-import { ReceiptComponent } from './receipt/receipt.component';
+import { ReceiptComponent } from './booking/receipt/receipt.component';
 import { DataService } from './data.service';
-import { ContactinfoItemComponent } from './contactinfo-item/contactinfo-item.component';
-import { CustompackageselectionComponent } from './custompackageselection/custompackageselection.component';
+import { ContactinfoItemComponent } from './booking/contactinfo-item/contactinfo-item.component';
+import { CustompackageselectionComponent } from './booking/custompackageselection/custompackageselection.component';
+import { SelectofferComponent } from './booking/selectoffer/selectoffer.component';
+import { OfferContainerComponent } from './offers/offercontainer.component';
+import { OfferDirective } from './offers/offer.directive';
+import { OfferService } from './offers/offer.service';
+// tslint:disable-next-line: max-line-length
+import { PredeterminedpackageselectedtionComponent } from './booking/predeterminedpackageselectedtion/predeterminedpackageselectedtion.component';
+
 
 
 
@@ -43,8 +50,14 @@ import { CustompackageselectionComponent } from './custompackageselection/custom
     FoodCheckComponent,
     ReceiptComponent,
     ContactinfoItemComponent,
-    CustompackageselectionComponent
+    CustompackageselectionComponent,
+    SelectofferComponent,
+    OfferContainerComponent,
+    OfferDirective,
+    PredeterminedpackageselectedtionComponent
   ],
+  entryComponents:[CustompackageselectionComponent,PredeterminedpackageselectedtionComponent],
+
   imports: [
     ReactiveFormsModule,
     MatStepperModule, MatFormFieldModule, MatInputModule,
@@ -58,7 +71,7 @@ import { CustompackageselectionComponent } from './custompackageselection/custom
     FormsModule
 
   ],
-  providers: [DataService],
+  providers: [DataService, OfferService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

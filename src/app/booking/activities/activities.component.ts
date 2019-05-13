@@ -11,7 +11,7 @@ export class ActivitiesComponent implements OnInit {
     NUMBEROFPARTICIPENTS?:number;
     PRICEPERPERSON?:number;
     DESCRIPTION?:string;
-    IsSelected:boolean;
+    IsSelected?:boolean;
 
 
 

@@ -1,9 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { OfferService } from '../offers/offer.service';
+import { OfferItem } from '../offers/offer-item';
+
+
 
 /**
  * @title Stepper vertical
- */
+
+ **/
+
+
+
 @Component({
   selector: 'app-stepper',
   templateUrl: 'stepper.component.html',
@@ -15,11 +23,16 @@ export class StepperComponent implements OnInit {
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
   eighthFormGroup: FormGroup;
+  offers: OfferItem[];
 
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private offerService: OfferService) {}
 
   ngOnInit() {
+     
+    this.offers = this.offerService.getOffers();
+
+
     this.firstFormGroup = this.formBuilder.group({
       firstCtrl: ['', Validators.required]
     });
@@ -33,3 +46,5 @@ export class StepperComponent implements OnInit {
       eighthCtrl: ['', Validators.required]
       });
 }}
+
+

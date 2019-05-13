@@ -14,13 +14,12 @@ export class AttendancesComponent{
 
   constructor(private data: DataService) {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.data.currentnumberOfPeople.subscribe(numberOfPeople => this.numberOfPeople = numberOfPeople);
   }
 
   newMessage(){
-    
-    this.data.changeNumberOfPeople(this.numberOfPeople)
+    this.data.changeNumberOfPeople(this.numberOfPeople);
   }
 
 }

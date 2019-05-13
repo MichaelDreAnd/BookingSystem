@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, empty } from 'rxjs';
 import { ActivitiesComponent } from './booking/activities/activities.component';
-import { Person } from './contactinfo-item/person';
+import { Person } from './booking/contactinfo-item/person';
 
 @Injectable() 
 export class DataService{

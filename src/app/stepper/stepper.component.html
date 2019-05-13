@@ -1,41 +1,35 @@
 <mat-vertical-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
-    <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Vælg dato</ng-template>
-      <app-date></app-date>
-      <br>
-      <app-time></app-time>
-      <div>
-        <button mat-button matStepperNext>Næste</button>
-      </div>
-    </form>
+
+  <mat-step>
+    <ng-template matStepLabel>Vælg dato</ng-template>
+    <app-date></app-date>
+    <br>
+    <app-time></app-time>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>Antal personer</ng-template>
-        <app-attendances></app-attendances>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="thirdFormGroup">
-        <form [formGroup]="thirdFormGroup">
-          <ng-template matStepLabel>Vælg pakke</ng-template>
-         <!-- <app-package-list></app-package-list>
-          <div>
-            <button mat-button matStepperNext>Næste</button>
-          </div>-->
-        </form>
-      </mat-step>
-      <mat-step>
-        <app-custompackageselection></app-custompackageselection>
-     </mat-step>
-  <mat-step [stepControl]="eighthFormGroup">
-      <form [formGroup]="eighthFormGroup">
-        <ng-template matStepLabel>Færdig</ng-template>
-        <app-receipt></app-receipt>
-      </form>
-    </mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-   
-    
-  
+
+
+  <mat-step>
+    <ng-template matStepLabel>Antal personer</ng-template>
+    <app-attendances></app-attendances>
+  </mat-step>
+
+
+  <mat-step>
+    <ng-template matStepLabel>Vælg pakke</ng-template>
+    <app-selectoffer></app-selectoffer>
+  </mat-step>
+
+
+  <mat-step>
+   <OfferContainer [offers]="offers"></OfferContainer>
+  </mat-step>
+
+
+  <mat-step>
+    <ng-template matStepLabel>Færdig</ng-template>
+    <app-receipt></app-receipt>
+  </mat-step>
+
+  <ng-template matStepLabel>Done</ng-template>
+
 </mat-vertical-stepper>
