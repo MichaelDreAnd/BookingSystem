@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,Input, EventEmitter } from '@angular/core';
+import { componentRefresh } from '@angular/core/src/render3/instructions';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-selectoffer',
@@ -6,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./selectoffer.component.css']
 })
 export class SelectofferComponent {
+  @Output() index: number;
 
-  constructor() { }
+  constructor() {}
+
+  @Output() Clicked = new EventEmitter<number>();
+
+  clickedbtn(id: number){
+
+    this.Clicked.emit(id);
+
+    console.log(id);
+
+  }
 
 }

@@ -21,6 +21,8 @@ export class DataService{
     private PersonSource = new BehaviorSubject<Person>(new Person("","","","","","",""))
     currentPerson = this.PersonSource.asObservable();
 
+   
+
 
     changeNumberOfPeople(numberOfPeople: number) {
       this.numberOfPeopleSource.next(numberOfPeople)}

@@ -10,7 +10,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class CustompackageselectionComponent implements OnInit {
   @Input() customhandler: Function;
   
-  createcustomcomponent1(){}
+  createcustomcomponent(){}
   isLinear = false;
   forthFormGroup: FormGroup;
   fifthFormGroup: FormGroup;

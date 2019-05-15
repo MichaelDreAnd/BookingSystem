@@ -16,12 +16,12 @@
 
   <mat-step>
     <ng-template matStepLabel>Vælg pakke</ng-template>
-    <app-selectoffer></app-selectoffer>
+    <app-selectoffer (Clicked)="onClicked($event)" ></app-selectoffer>
   </mat-step>
 
 
   <mat-step>
-   <OfferContainer [offers]="offers"></OfferContainer>
+   <OfferContainer  [index]='index' [offers]="offers"></OfferContainer>
   </mat-step>
 
 
