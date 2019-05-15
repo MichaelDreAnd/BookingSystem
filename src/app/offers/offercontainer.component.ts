@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild, ComponentFactoryResolver, OnDestroy, EventEmitter, SimpleChange } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, OnChanges, ComponentFactoryResolver, OnDestroy, EventEmitter, SimpleChange } from '@angular/core';
 
 import { OfferDirective } from './offer.directive';
 
@@ -13,8 +13,8 @@ import {OfferComponent} from './offer.component';
     `,
 })
 
-export class OfferContainerComponent implements OnInit {
-@Input()  index: number=0;
+export class OfferContainerComponent{
+@Input()  index: number;
 @Input() offers: OfferItem[];
 
 
@@ -23,22 +23,34 @@ export class OfferContainerComponent implements OnInit {
 
 
 @ViewChild(OfferDirective) offerhost: OfferDirective;
-constructor(private componentFactoryResolver: ComponentFactoryResolver){}
+constructor(private componentFactoryResolver: ComponentFactoryResolver)
+{
+this.index = 0;
+}
+
+
+
+
+
+
 
 ngOnChanges(changes: SimpleChange){
-this.index = changes.currentValue;
-this.loadComponent();
+    console.log("index=" + this.index);
+    if(this.index === undefined)
+    {
+        console.log("isfirstchange");
+        this.index = 0;
+    }
+    else{
+        console.log("OnChanges" + changes.currentValue);
+        changes.
+        this.index = changes.currentValue;
+    }
+    this.loadComponent();
 }
-
-
-
-ngOnInit() {
-this.loadComponent();
-}
-
 
 loadComponent(){
-
+    console.log("LoadComponent" + this.index);
     let OfferItem = this.offers[this.index];
     let componentFactory = this.componentFactoryResolver.resolveComponentFactory(OfferItem.component);
     let viewContainerRef = this.offerhost.viewContainerRef;
