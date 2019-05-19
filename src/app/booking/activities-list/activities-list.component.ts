@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivitiesComponent } from '../activities/activities.component';
 import { DataService } from 'src/app/data.service';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { DBService } from 'src/app/db.service';
+
 
 @Component({
   selector: 'app-activities-list',
@@ -8,22 +12,16 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./activities-list.component.css']
 })
 export class ActivitiesListComponent implements OnInit {
-  activityA: ActivitiesComponent = new ActivitiesComponent("Crazy Gokart",0,0,123,"Du kører i gokart")
-  activityB: ActivitiesComponent = new ActivitiesComponent("HUNT",0,0,240,"Shoot the birds!")
-  activityC: ActivitiesComponent = new ActivitiesComponent("Hygge",0,0,123,"Du hygger")
-  activityD: ActivitiesComponent = new ActivitiesComponent("Football",0,0,240,"Shoot the shoot")
+  
   AllActivities: ActivitiesComponent[];
   SelectedActivities: ActivitiesComponent[];
+  
+  
 
-
-  constructor(private data: DataService) {
- 
- 
-
-    this.AllActivities = [this.activityA, this.activityB,this.activityC,this.activityD];
+  constructor(private data: DataService, private DB: DBService) {
+   
   }
 
- 
 
 
   submit()
@@ -40,10 +38,13 @@ export class ActivitiesListComponent implements OnInit {
   this.SelectedActivities = [...temparr]
   this.data.changeActivities(this.SelectedActivities)
   
+  
   }
 
   ngOnInit() {
     this.data.currentActivities.subscribe( SelectedActivities => this.SelectedActivities = SelectedActivities);
+    this.DB.GetActivities().subscribe(data => this.AllActivities = data);
+    
   }
 
 }

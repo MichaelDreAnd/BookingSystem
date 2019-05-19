@@ -18,7 +18,7 @@ export class SelectofferComponent {
 
     this.Clicked.emit(id);
 
-    console.log(id);
+    
 
   }
 

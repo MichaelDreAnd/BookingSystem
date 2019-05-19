@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./activities.component.css']
 })
 export class ActivitiesComponent implements OnInit {
-    NAME: string;
-    DURATION?:number;
-    NUMBEROFPARTICIPENTS?:number;
-    PRICEPERPERSON?:number;
-    DESCRIPTION?:string;
+    _name: string;
+    _duration?:number;
+    _numberofparticipents?:number;
+    _price?:number;
+    _description?:string;
     IsSelected?:boolean;
 
 
@@ -20,11 +20,11 @@ export class ActivitiesComponent implements OnInit {
 
   constructor(name: string, duration: number, numberofparticipents: number, priceperperson: number, description: string)
    {
-    this.NAME = name;
-    this.DURATION = duration;
-    this.NUMBEROFPARTICIPENTS = numberofparticipents;
-    this.PRICEPERPERSON = priceperperson;
-    this.DESCRIPTION = description;
+    this._name = name;
+    this._duration = duration;
+    this._numberofparticipents = numberofparticipents;
+    this._price = priceperperson;
+    this._description = description;
     this.IsSelected = false; 
    }
 

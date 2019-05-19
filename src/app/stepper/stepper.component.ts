@@ -30,7 +30,7 @@ export class StepperComponent implements OnInit {
   offers: OfferItem[];
   constructor(private formBuilder: FormBuilder, private offerService: OfferService) {}
 
-onClicked(id : number)
+onClicked(id: number)
 {
  this.index = id;
  console.log(this.index);

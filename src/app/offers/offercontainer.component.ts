@@ -16,7 +16,7 @@ import {OfferComponent} from './offer.component';
 export class OfferContainerComponent{
 @Input()  index: number;
 @Input() offers: OfferItem[];
-
+//@Input() changes:SimpleChange;
 
 
 
@@ -24,8 +24,8 @@ export class OfferContainerComponent{
 
 @ViewChild(OfferDirective) offerhost: OfferDirective;
 constructor(private componentFactoryResolver: ComponentFactoryResolver)
-{
-this.index = 0;
+{ 
+    
 }
 
 
@@ -34,23 +34,12 @@ this.index = 0;
 
 
 
-ngOnChanges(changes: SimpleChange){
+ngOnChanges(){
     console.log("index=" + this.index);
-    if(this.index === undefined)
-    {
-        console.log("isfirstchange");
-        this.index = 0;
-    }
-    else{
-        console.log("OnChanges" + changes.currentValue);
-        changes.
-        this.index = changes.currentValue;
-    }
-    this.loadComponent();
+    this.loadComponent(this.index);
 }
 
-loadComponent(){
-    console.log("LoadComponent" + this.index);
+loadComponent(index:number){
     let OfferItem = this.offers[this.index];
     let componentFactory = this.componentFactoryResolver.resolveComponentFactory(OfferItem.component);
     let viewContainerRef = this.offerhost.viewContainerRef;

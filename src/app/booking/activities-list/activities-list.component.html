@@ -1,7 +1,7 @@
 
 <li *ngFor="let activity of AllActivities">
-Navn: {{activity.NAME}}  Pris {{activity.PRICEPERPERSON}} 
-Vælg: {{activity.IsSelected}}
+Navn: {{activity._name}} <br> Pris {{activity._price}} <br>
+Vælg: {{activity_isSelected}} <br>
 <input type="checkbox" [(ngModel)]="activity.IsSelected" > 
 </li>
 <button mat-button matStepperNext (click)="submit()" >Næste</button>
