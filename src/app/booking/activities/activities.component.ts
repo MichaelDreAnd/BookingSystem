@@ -25,7 +25,7 @@ export class ActivitiesComponent implements OnInit {
     this._numberofparticipents = numberofparticipents;
     this._price = priceperperson;
     this._description = description;
-    this.IsSelected = false; 
+    this.IsSelected = false;
    }
 
 
@@ -35,7 +35,6 @@ export class ActivitiesComponent implements OnInit {
       else if(this.IsSelected = false){
         this.IsSelected = true;
       }
-        
    }
 
 

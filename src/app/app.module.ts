@@ -27,7 +27,6 @@ import { SelectofferComponent } from './booking/selectoffer/selectoffer.componen
 import { OfferContainerComponent } from './offers/offercontainer.component';
 import { OfferDirective } from './offers/offer.directive';
 import { OfferService } from './offers/offer.service';
-// tslint:disable-next-line: max-line-length
 import { PredeterminedpackageselectedtionComponent } from './booking/predeterminedpackageselectedtion/predeterminedpackageselectedtion.component';
 
 
@@ -57,7 +56,7 @@ import { PredeterminedpackageselectedtionComponent } from './booking/predetermin
     OfferDirective,
     PredeterminedpackageselectedtionComponent
   ],
-  entryComponents:[CustompackageselectionComponent,PredeterminedpackageselectedtionComponent],
+  entryComponents:[CustompackageselectionComponent, PredeterminedpackageselectedtionComponent],
 
   imports: [
     ReactiveFormsModule,

@@ -1,1 +1,6 @@
-*ngFor="let item of list"
+<li *ngFor="let item of PackageList">
+{{item._descriptionLong}}   
+<br>
+{{item._descriptionShort}}
+<br>
+{{item.price}}

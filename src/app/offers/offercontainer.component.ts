@@ -16,7 +16,7 @@ import {OfferComponent} from './offer.component';
 export class OfferContainerComponent{
 @Input()  index: number;
 @Input() offers: OfferItem[];
-//@Input() changes:SimpleChange;
+
 
 
 
